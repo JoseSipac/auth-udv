@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Configuraciones</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Notificaciones</ion-label>
+        <ion-toggle [(ngModel)]="notificaciones"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Modo oscuro</ion-label>
+        <ion-toggle [(ngModel)]="modoOscuro"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

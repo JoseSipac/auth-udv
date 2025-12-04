@@ -1,0 +1,7 @@
+{
+  "name": "udv-auth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

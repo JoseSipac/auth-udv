@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="perfilForm" (ngSubmit)="onSubmit()">
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="nombreCtrl?.touched && nombreCtrl?.invalid">
+      El nombre es obligatorio.
+    </ion-note>
+
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input formControlName="apellido"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="apellidoCtrl?.touched && apellidoCtrl?.invalid">
+      El apellido es obligatorio.
+    </ion-note>
+
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" formControlName="correo"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="correoCtrl?.touched && correoCtrl?.invalid">
+      Ingrese un correo válido.
+    </ion-note>
+
+    <ion-button expand="block" class="ion-margin-top" type="submit">
+      Enviar
+    </ion-button>
+  </form>
+</ion-content>
